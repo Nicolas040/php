@@ -12,3 +12,13 @@ function dd($value) {
     dbug($value);
     die("Script arrété !!!!");
 }
+
+function view(string $name, string | array $model)
+{
+    return require 'views/layout.view.php';
+}
+
+function cleanData($value)
+{
+ return trim(filter_var($value, FILTER_SANITIZE_FULL_SPECIAL_CHARS));
+}
